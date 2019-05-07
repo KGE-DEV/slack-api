@@ -2,9 +2,9 @@ const
     express = require('express'),
     router = express.Router()
 
-router.route('/:message')
+router.route('/')
 .post(function(req, res){
-  console.log(req.body.text);
+  console.log(req);
   let clapifiedString = clapify(req.body.text);
   res.status(200).json({
     status: "ok",
