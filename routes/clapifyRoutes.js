@@ -7,7 +7,8 @@ router.route('/')
   let clapifiedString = clapify(req.body.text);
   res.status(200).json({
     status: "ok",
-    text: clapifiedString
+    text: clapifiedString,
+    response_type: "in_channel",
   })
 })
 
