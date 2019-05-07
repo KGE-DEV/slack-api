@@ -3,7 +3,7 @@ const
     router = express.Router()
 
 router.route('/:message')
-.get(function(req, res){
+.post(function(req, res){
   let clapifiedString = clapify(req.params.message);
   res.status(200).json({
     status: "ok",
