@@ -4,6 +4,7 @@ const
 
 router.route('/:message')
 .post(function(req, res){
+  console.log(req.body);
   let clapifiedString = clapify(req.params.message);
   res.status(200).json({
     status: "ok",
