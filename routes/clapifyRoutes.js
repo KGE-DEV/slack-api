@@ -3,15 +3,28 @@ const
     router = express.Router()
 
 router.route('/')
-.post(function(req, res){
-  console.log(req.body);
-  let clapifiedString = clapify(req.body.text);
-  res.status(200).json({
-    status: "ok",
-    text: clapifiedString,
-    response_type: "in_channel",
+  .post(function(req, res){
+    console.log(req.body);
+    let clapifiedString = clapify(req.body.text);
+    res.status(200).json({
+      status: "ok",
+      text: clapifiedString,
+      response_type: "in_channel",
+    })
   })
-})
+
+router.route('/post')
+  .post(function(req, res){
+    console.log(req.body);
+    let clapifiedString = clapify(req.body.text);
+    res.status(200).json({
+      status: "ok",
+      text: clapifiedString,
+      response_type: "in_channel",
+    })
+  })
+
+
 
 
 
