@@ -9,7 +9,7 @@ router.route('/')
     res.status(200).json({
       status: "ok",
       text: clapifiedString,
-      response_type: "in_channel",
+      // response_type: "in_channel",
     })
   })
 
