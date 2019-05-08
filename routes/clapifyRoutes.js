@@ -11,8 +11,6 @@ router.route('/')
       text: clapifiedString,
       "attachments": [
         {
-            "text": "Choose a game to play",
-            "fallback": "You are unable to choose a game",
             "callback_id": "wopr_game",
             "color": "#3AA3E3",
             "attachment_type": "default",
@@ -24,24 +22,11 @@ router.route('/')
                     "value": "clap"
                 },
                 {
-                    "name": "game",
-                    "text": "Falken's Maze",
+                    "name": "cancel",
+                    "text": "Show Mercy",
                     "type": "button",
-                    "value": "maze"
+                    "value": "cancel"
                 },
-                {
-                    "name": "game",
-                    "text": "Thermonuclear War",
-                    "style": "danger",
-                    "type": "button",
-                    "value": "war",
-                    "confirm": {
-                        "title": "Are you sure?",
-                        "text": "Wouldn't you prefer a good game of chess?",
-                        "ok_text": "Yes",
-                        "dismiss_text": "No"
-                    }
-                }
             ]
         }
     ]
@@ -52,10 +37,9 @@ router.route('/')
 router.route('/post')
   .post(function(req, res){
     console.log(req.body);
-    let clapifiedString = clapify(req.body.text);
     res.status(200).json({
       status: "ok",
-      text: clapifiedString,
+      text: "clapifiedString",
       response_type: "in_channel",
     })
   })
