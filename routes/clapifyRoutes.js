@@ -9,6 +9,14 @@ router.route('/')
     res.status(200).json({
       status: "ok",
       text: clapifiedString,
+      "actions": [
+        {
+            "name": "clap",
+            "text": "Clap Em'",
+            "type": "button",
+            "value": "clap"
+        },
+      ]
       // response_type: "in_channel",
     })
   })
