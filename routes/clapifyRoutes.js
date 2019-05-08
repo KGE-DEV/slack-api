@@ -36,9 +36,7 @@ router.route('/')
 
 router.route('/post')
   .post(function(req, res){
-    // console.log(req.body);
-    let json = JSON.parse(req.body);
-    console.log(json.actions[0].value);
+    console.log(req.body.actions);
     res.status(200).json({
       status: "ok",
       text: "clapifiedString",
