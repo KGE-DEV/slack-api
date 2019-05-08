@@ -19,7 +19,7 @@ router.route('/')
                     "name": "clap",
                     "text": "Clap Em'",
                     "type": "button",
-                    "value": "clap"
+                    "value": clapifiedString
                 },
                 {
                     "name": "cancel",
